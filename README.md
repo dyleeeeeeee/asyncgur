@@ -1,23 +1,15 @@
-[![](https://img.shields.io/pypi/v/asyncgur.svg)](https://pypi.org/project/asyncgur/) [![](https://img.shields.io/pypi/dm/asyncgur.svg?style=plastic)](https://pypi.org/project/asyncgur/) [![](https://img.shields.io/github/license/Dyleee/asyncgur.svg?style=plastic)](https://pypi.org/project/asyncgur/) [![](https://img.shields.io/github/stars/Dyleee/asyncgur.svg?style=plastic)](https://pypi.org/project/asyncgur/)
+# AsyncGur
 
-# asyncgur
+[![PyPI version](https://badge.fury.io/py/asyncgur.svg)](https://badge.fury.io/py/asyncgur)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 
-> An Asynchronous Imgur Wrapper for Python
+A modern, asynchronous Python client for the Imgur API built with `aiohttp`.
 
+## Features
 
-*Example Usage:* 
-```python
-from asyncgur import Imgur
-client_id = 'YOUR_IMGUR_CLIENT_ID'
-imgur_app = Imgur(client_id)
-
-async def main():
-    image, response = await imgur_app.upload_image(image='some_image_url_or_bytes')
-    assert response.success == True and response.status == 200
-    print(image)
-
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main())
-```
-
-> See misc/examples for more usecases.
+- **Fully Asynchronous**: Built with `aiohttp` for high-performance non-blocking I/O
+- **Type Hints**: Comprehensive type annotations for better IDE support and code quality
+- **Dataclasses**: Clean, structured data models for API responses
+- **Context Manager Support**: Automatic resource management with async context managers
+- **Comprehensive Error Handling**: Detailed error information
