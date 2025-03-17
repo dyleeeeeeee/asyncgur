@@ -7,8 +7,6 @@ import aiohttp
 
 from enums import PayloadData
 
-# ... existing code ...
-
 @dataclass
 class Image_info:
     id: str
@@ -105,6 +103,8 @@ class ImgurAPIError(Exception):
         super().__init__(self.message)
 
 class RateLimitExceeded(ImgurAPIError):
+    """Exception raised when Imgur API rate limit is exceeded."""
+    
     def __init__(self, message, reset_time=None):
         self.reset_time = reset_time
         super().__init__(message)
