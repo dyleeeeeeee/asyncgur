@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "asyncgur"
+version = "0.1.0a2"
+authors = [
+  { name="Dylee", email="calistaff33@proton.me" },
+]
+description = "An asynchronous Python wrapper for the Imgur API"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+    "Framework :: AsyncIO",
+]
+license = "LGPL-3.0"
+license-files = ["LICENSE*"]
+dependencies = [
+    "aiohttp>=3.8.0",
+    "dacite>=1.6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Dyleeeeeeee/asyncgur"
+Issues = "https://github.com/Dyleeeeeeee/asyncgur/issues"
+Documentation = "https://asyncgur.readthedocs.io"
+Repository = "https://github.com/Dyleeeeeeee/asyncgur.git"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/asyncgur"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/asyncgur",
+    "README.md",
+    "LICENSE",
+]
