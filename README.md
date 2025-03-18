@@ -12,4 +12,12 @@ A modern, asynchronous Python client for the Imgur API built with `aiohttp`.
 - **Type Hints**: Comprehensive type annotations for better IDE support and code quality
 - **Dataclasses**: Clean, structured data models for API responses
 - **Context Manager Support**: Automatic resource management with async context managers
-- **Comprehensive Error Handling**: Detailed error information
+- **Comprehensive Error Handling**: Detailed error information and proper exception hierarchy
+- **Rate Limit Tracking**: Built-in monitoring of API rate limits to prevent quota issues
+- **OAuth Support**: Full support for Imgur's OAuth authentication flow
+- **Complete API Coverage**: Support for images, albums, comments, and account operations
+
+## Installation
+
+```bash
+pip install asyncgur
